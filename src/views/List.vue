@@ -2,7 +2,9 @@
   <div class="container">
     <Sorting />
 
-    <b-spinner class="spinner" variant="primary" v-if="loading"></b-spinner>
+    <div v-if="loading" class="spinner-wrapper">
+      <b-spinner class="spinner" variant="primary"></b-spinner>
+    </div>
 
     <div v-else>
       <div class="listing row">
@@ -95,14 +97,23 @@ export default {
 .head {
   background-color: #eee;
 }
-.spinner {
+.spinner-wrapper {
   position: fixed;
-  left: 50%;
-  top: 50%;
-  height: 5rem;
-  width: 5rem;
-}
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
 
+  .spinner {
+    height: 5rem;
+    width: 5rem;
+  }
+}
 .listing {
   font-size: 14px;
 

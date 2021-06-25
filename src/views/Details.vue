@@ -87,14 +87,6 @@ a {
   font-size: 14px;
 }
 
-.spinner {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  height: 5rem;
-  width: 5rem;
-}
-
 .details {
   &__description {
     padding: 30px;
